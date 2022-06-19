@@ -1,0 +1,115 @@
+/* apply on page load  */
+.closeAddPageInit{
+    display: none;
+}
+/* apply when page is inactive  */
+.closeAddPage {
+  display: none;
+  z-index: 1;
+  flex-direction: column;
+  position: relative;
+  max-width: 80%;
+  border: none;
+  background-color: #032047;
+  color: rgba(255, 255, 255, 0.854);
+  padding:40px 50px ;
+}
+/* apply when page is active  */
+.openAddPage {
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    position: relative;
+    max-width: 100%;
+    margin: 3% 20%;
+    border-radius: 10px;
+    border: none;
+    background-color: #032047;
+    color: rgba(255, 255, 255, 0.854);
+    padding:40px 50px ;
+}
+@media (max-width:700px) {
+  .openAddPage {
+    margin: 10%;
+    padding: 30px ;
+    max-width: 80%;
+  }
+}
+/* top part  */
+.addPageHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #b3c9e6 ;
+}
+/* close button  */
+.addPageCloseBtn {
+  border: none;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.328);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+.addPageCloseBtn:hover {
+  background-color: rgba(255, 255, 255, 0.77);
+  transition: 0.5s;
+
+}
+/* form styles  */
+.addForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+}
+/* input styles  */
+.addFormInputs {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.675);
+    border: none;
+    border-radius: 10px;
+}
+.addFormInputs:focus {
+    outline: none;
+}
+/* submit button  */
+.addFormBtn {
+    border: none;
+    padding: 10px 0;
+    background-color: #77dd77e3;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.addFormBtn:hover {
+  background-color: #4ddb4d ;
+  transition: 0.5s;
+}
+
+
+
+/* keyframes  */
+@keyframes scale-in-center {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-out-center {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 1;
+    }
+  }

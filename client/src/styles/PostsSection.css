@@ -1,0 +1,234 @@
+
+.postsSection {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+
+}
+.eachPost {
+  margin: 10px;
+  padding: 10px;
+    background-color: #FB8500 ;
+    border: none;
+    border-radius: 10px;
+    max-width: 100%;
+    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.eachPost p, .eachPost h3{
+  background-color: #FB8500;
+  color: #743f02;
+  border:none ;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.eachPost p {
+  color:#743f02 ;
+}
+/* delete each post  */
+.deletePostBtn path{
+  cursor: pointer;
+  transition: 0.5s;
+}
+.deletePostBtn:hover path{
+  color: #f4b266;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* on delete  */
+.shake h3 {
+  margin-bottom: 10px;
+}
+.shake {
+  animation: vibrate-1 1s linear infinite both;
+  padding-bottom: 0;
+}
+/* on delete, remove delete buttons  */
+.removeDeleteBtnSectionInit {
+  display: none;
+}
+
+.removeDeleteConfirmBtn, .removeDeleteCancelBtn {
+  display: none;
+  margin:20px  ;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.removeDeleteConfirmBtn {
+  background-color:#ff0000 ;
+}
+/* on delete, show delete buttons  */
+.deleteBtnSection {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #032047;
+  transition: 0.5s;
+}
+
+.deleteConfirmBtn, .deleteCancelBtn {
+  margin:20px  ;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 1s;
+}
+.deleteConfirmBtn {
+  background-color:#ff0000 ;
+}
+.deleteConfirmBtn:hover  {
+  background-color: #f98080;
+}
+.deleteCancelBtn:hover {
+  background-color: #9ad9e9;
+}
+
+.loginPrompt {
+  width: 100%;
+  text-align: center;
+  opacity: 0.5;
+  font-weight: 400;
+  font-size: 24px;
+  color: #032047;
+}
+
+
+
+@media (max-width:900px) {
+  .postsSection {
+    margin: 10px;
+  }
+  .eachPost {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .loginPrompt {
+    font-size: 20px;
+  }
+}
+
+
+
+
+/* keyframes  */
+
+
+@keyframes vibrate-1 {
+  0% {
+            transform: translate(0);
+  }
+  20% {
+            transform: translate(-2px, 2px);
+  }
+  40% {
+            transform: translate(-2px, -2px);
+  }
+  60% {
+            transform: translate(2px, 2px);
+  }
+  80% {
+            transform: translate(2px, -2px);
+  }
+  100% {
+            transform: translate(0);
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-out-top {
+  0% {
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+            transform: translateY(-1000px);
+    opacity: 0;
+
+  }
+}
+
+
+
+  /* checkbox  */
+  .hideCheckbox {
+    display: none;
+  }
+  .showCheckbox{
+    display: block;
+    transition: 0.5s;
+  }
+  .checkboxLabel {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+
+  /* Hide the default checkbox */
+  .checkboxLabel input {
+    visibility: hidden;
+    cursor: pointer;
+  }
+
+  /* Create a custom checkbox */
+  .newCheckbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #f1e4c3;
+    border-radius: 20px;
+    border: none;
+  }
+
+  .checkboxLabel:hover input ~ .newCheckbox {
+    background-color: #fdd777;
+  }
+
+  .checkboxLabel input:checked ~ .newCheckbox {
+    background-color: #ba8604;
+  }
+
+  /* Create the newCheckbox/indicator (hidden when not checked) */
+  .newCheckbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the newCheckbox when checked */
+  .checkboxLabel input:checked ~ .newCheckbox:after {
+    display: block;
+  }
+
+  /* Style the newCheckbox/indicator */
+  .checkboxLabel .newCheckbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }

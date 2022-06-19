@@ -1,0 +1,76 @@
+.hideLogin {
+    display: none;
+}
+.showLogin {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #c0dfee;
+    margin: 3% 35%;
+    padding:30px 40px ;
+    color: rgb(3, 3, 94);
+}
+/* .showLogin {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 100%;
+    margin: 3% 20%;
+    border-radius: 10px;
+    border: none;
+    background-color: #032047;
+    color: rgba(255, 255, 255, 0.854);
+    padding:40px 50px ;
+} */
+@media (max-width:800px) {
+  .showLogin{
+    margin: 3% 15%;
+    padding: 25px ;
+  }
+}
+.showLogin h2 {
+    margin-bottom: 10px ;
+}
+.showLogin input {
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 10px;
+    background-color: #ffffff ;
+    width: 100%;
+}
+.showLogin input:focus {
+   outline: none;
+}
+.showLogin button {
+   padding: 8px ;
+   border: none;
+   border-radius: 5px;
+   width: 100%;
+
+}
+.loginSubmitButton {
+    background-color: #77de77d5;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+.loginSubmitButton:hover {
+    background-color: #4ddb4d;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.loginCloseButton {
+   background-color:rgba(173, 169, 169, 0.373);
+}
+.loginCloseButton:hover {
+    background-color: rgba(255, 255, 255, 0.371);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.invalidPrompts {
+    font-size: 12px;
+    color: rgba(255, 0, 0, 0.58);
+}

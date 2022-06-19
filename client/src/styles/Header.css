@@ -1,0 +1,138 @@
+
+.headerMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #032047;
+
+}
+
+.headerTitle {
+    color: #FB8500;
+    margin: 20px 60px;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.headerButtons {
+    display: flex;
+}
+/* login and signup buttons   */
+.hideLoginButtons {
+    display: none;
+}
+.showLoginButtons {
+    display: block;
+}
+.loginButton{
+    background-color: #c0dfee;
+    padding: 10px 15px;
+    margin:20px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 16px;
+}
+.loginButton:hover {
+    background-color: #eaeff2;
+    transition: 0.5s;
+}
+
+.signupButton {
+    background-color: #0a718a;
+    padding: 10px 15px;
+    margin:20px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 16px;
+    color: white;
+}
+.signupButton:hover {
+    background-color: #119dc1;
+    transition: 0.5s;
+}
+/* logout button  */
+.dLogoutButton {
+    background-color: #c0dfee;
+    padding: 10px 15px;
+    margin: 22px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 16px;
+}
+.mLogoutButton {
+    display: none;
+    background-color: #c0dfee;
+    padding: 11px 20px;
+    margin:20px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 16px;
+}
+.mloginButton:hover, .dLogoutButton:hover {
+    background-color: #eaeff2;
+    transition: 0.5s;
+}
+/* add and delete post buttons  */
+.hideADButtons {
+    display: none;
+}
+.showADButtons {
+    display: block;
+
+}
+.addButton {
+    background-color: #77dd77;
+    padding: 10px 11px;
+    margin:20px 13px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.addButton:hover {
+    background-color: #b6e9b6;
+    transition: 0.5s;
+
+}
+.addIcon  path{
+    stroke: rgb(0, 0, 0);
+}
+.deleteButton {
+    background-color: #FF0000;
+    padding: 10px 11px;
+    margin:20px 13px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.deleteButton:hover {
+    background-color: #ec9595;
+    transition: 0.5s;
+
+}
+@media (max-width:700px) {
+    .headerMain{
+        flex-direction: column;
+        align-items: center;
+    }
+    .headerTitle {
+        margin: 10px;
+    }
+    .headerMain button {
+        margin:0 20px 20px 20px;
+    }
+    .dLogoutButton {
+        display: none;
+    }
+    .mLogoutButton {
+        display: block;
+    }
+}
