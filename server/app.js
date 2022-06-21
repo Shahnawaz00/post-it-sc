@@ -95,7 +95,9 @@ app.get('/post', async function (req, res) {
 })
 
 var port = 5000
+const host = '0.0.0.0';
+const PORT = process.env.PORT || 5000;
 
-app.listen( port,() => {
+app.listen( PORT, () => {
    console.log(`Listening at http://localhost:${port} `)
 })

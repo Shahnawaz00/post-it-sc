@@ -45,6 +45,7 @@ const PostsList = () => {
             dispatch (
               deletePostDispatched(false)
             )
+            setCheckedArray([])
         } catch (err) {
           console.error('fail', err)
           alert('request failed')
